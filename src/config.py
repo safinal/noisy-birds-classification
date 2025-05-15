@@ -1,0 +1,20 @@
+import torch
+
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+teacher_lr = 0.001
+teacher_num_epochs = 20
+teacher_patience = 5
+teacher_weight_decay = 0.01
+
+student_lr = 0.0001
+student_num_epochs = 20
+student_patience = 5
+student_weight_decay = 0.01
+
+batch_size = 128
+num_workers = 32
+split_ratio = 0.6
+
+initial_threshold = 0.95
+min_threshold = 0.8
+iterations = 3
